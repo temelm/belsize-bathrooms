@@ -19,7 +19,7 @@
                 
                 $j('html, body').animate({
                     scrollTop: (g.currentPage === '#home') ? 0 : $j(g.currentPage).offset().top
-                }, 500);
+                }, 0);
             });
         }
     } catch (exception) {
@@ -28,3 +28,27 @@
         }
     }
 })(window, window.document, window.console, window.jQuery);
+
+window.initMap = function() {
+    'use strict';
+    
+    try {
+        var latLng = {
+            lat: 51.543252,
+            lng: -0.179318
+        };
+        var map = new window.google.maps.Map(window.document.getElementById('map'), {
+            center: latLng,
+            zoom: 16
+        });
+        var marker = new window.google.maps.Marker({
+            map: map,
+            position: latLng,
+            title: 'Belsize Bathrooms'
+        });
+    } catch (exception) {
+        if (!!window.console && typeof window.console === 'object' && typeof window.console.error === 'function') {
+            window.console.error(exception.message);
+        }
+    }
+};
