@@ -2,8 +2,16 @@
     margin-top: 80px;
 }
 
-#about p {
+#about p, #store p {
     text-align: left;
+}
+
+#store .row div h4 {
+    text-transform: uppercase;
+}
+
+#contact {
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width: 960px) {
