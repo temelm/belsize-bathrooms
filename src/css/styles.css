@@ -1,3 +1,7 @@
+.jumbotron h1 {
+    color: #269abc;
+}
+
 #home {
     margin-top: 80px;
 }
@@ -8,6 +12,10 @@
 
 #store .row div h4 {
     text-transform: uppercase;
+}
+
+#store .list-group .list-group-item a {
+    display: block;
 }
 
 #contact {
