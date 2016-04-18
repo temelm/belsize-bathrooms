@@ -1,5 +1,9 @@
-body {
+/*body {
     position: relative;
+}*/
+
+p {
+    text-align: left;
 }
 
 .container .jumbotron {
@@ -13,19 +17,19 @@ body {
     margin-bottom: 20px;
 }
 
-#home {
-    /*margin-top: 51px;*/
-}
+/*#home {
+    margin-top: 51px;
+}*/
 
-#about p, #store p, #contact p {
-    text-align: left;
+.back-to-top {
+    text-align: right;
 }
 
 #store h4 {
     text-transform: uppercase;
 }
 
-#store a {
+#store .list-group-item a {
     display: block;
 }
 
@@ -37,10 +41,18 @@ body {
     border-bottom: none;
 }
 
+#opening-hours td {
+    width: 33%;
+}
+
 #map {
     height: 310px;
     margin-bottom: 25px;
     width: 100%;
+}
+
+#contact form .control-label {
+    text-align: left;
 }
 
 #message {
@@ -61,7 +73,7 @@ body {
     }
     
     .navbar-fixed-bottom ul li:first-child {
-        margin-top: 5px;
+        margin-top: 4px;
     }
     
     .navbar-fixed-bottom ul li a {

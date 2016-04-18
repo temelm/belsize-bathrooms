@@ -3,6 +3,8 @@
     
     try {
         if (typeof $j === 'function') {
+            g.scrollSpeed = 500;
+            
             $j('#bb-navbar a').click(function(event) {
                 // Prevent default behaviour
                 event.preventDefault();
@@ -19,7 +21,21 @@
                 
                 $j('html, body').animate({
                     scrollTop: (g.currentPage === '#home') ? 0 : $j(g.currentPage).offset().top
-                }, 0);
+                }, g.scrollSpeed);
+            });
+            
+            $j('.back-to-top-link').click(function(event) {
+                event.preventDefault();
+                
+                $j('html, body').animate({
+                    scrollTop: 0
+                }, g.scrollSpeed);
+            });
+            
+            $j('#store .list-group-item a').prop('target', '_blank');
+            
+            $j('#send').click(function(event) {
+                event.preventDefault();
             });
         }
     } catch (exception) {
@@ -39,7 +55,8 @@ window.initMap = function() {
         };
         var map = new window.google.maps.Map(window.document.getElementById('map'), {
             center: latLng,
-            zoom: 16
+            scrollwheel: false,
+            zoom: 15
         });
         var marker = new window.google.maps.Marker({
             map: map,
