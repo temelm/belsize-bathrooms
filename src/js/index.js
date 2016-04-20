@@ -3,7 +3,7 @@
     
     try {
         if (typeof $j === 'function') {
-            g.scrollSpeed = 500;
+            g.scrollSpeed = 300;
             
             // Open store links in a new window/tab
             $j('#store .list-group-item a').prop('target', '_blank');
@@ -15,15 +15,12 @@
                 // Collapse navigation bar (mobile)
                 $j('[data-target="#bb-navbar"]:not(".collapsed")').click();
                 
-                // Highlight active navigation link
-                $j('#bb-navbar li.active').removeClass('active');
-                $j(this).parent().addClass('active');
+                // Set current hash
+                var hash = $j(this).prop('hash');
                 
-                // Set current 'page' and scroll to it
-                g.currentPage = $j(this).prop('href').substring($j(this).prop('href').indexOf('#'));
-                
+                // Scroll to current hash
                 $j('html, body').animate({
-                    scrollTop: (g.currentPage === '#home') ? 0 : $j(g.currentPage).offset().top
+                    scrollTop: (hash === '#home') ? 0 : $j(hash).offset().top
                 }, g.scrollSpeed);
             });
             
