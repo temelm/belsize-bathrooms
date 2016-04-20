@@ -5,18 +5,21 @@
         if (typeof $j === 'function') {
             g.scrollSpeed = 500;
             
+            // Open store links in a new window/tab
+            $j('#store .list-group-item a').prop('target', '_blank');
+            
+            // Handle navigation link clicks
             $j('#bb-navbar a').click(function(event) {
-                // Prevent default behaviour
                 event.preventDefault();
-                
-                // Highlight active 'page'
-                $j('#bb-navbar li.active').removeClass('active');
-                $j(this).parent().addClass('active');
                 
                 // Collapse navigation bar (mobile)
                 $j('[data-target="#bb-navbar"]:not(".collapsed")').click();
                 
-                // Set current 'page'
+                // Highlight active navigation link
+                $j('#bb-navbar li.active').removeClass('active');
+                $j(this).parent().addClass('active');
+                
+                // Set current 'page' and scroll to it
                 g.currentPage = $j(this).prop('href').substring($j(this).prop('href').indexOf('#'));
                 
                 $j('html, body').animate({
@@ -24,6 +27,7 @@
                 }, g.scrollSpeed);
             });
             
+            // Handle 'Back to top' link clicks
             $j('.back-to-top-link').click(function(event) {
                 event.preventDefault();
                 
@@ -31,16 +35,10 @@
                     scrollTop: 0
                 }, g.scrollSpeed);
             });
-            
-            $j('#store .list-group-item a').prop('target', '_blank');
-            
-            $j('#send').click(function(event) {
-                //event.preventDefault();
-            });
         }
     } catch (exception) {
         if (!!c && typeof c === 'object' && typeof c.error === 'function') {
-            c.error(exception.message);
+            c.error('[init]:', exception.message);
         }
     }
 })(window, window.document, window.console, window.jQuery);
@@ -65,7 +63,7 @@ window.initMap = function() {
         });
     } catch (exception) {
         if (!!window.console && typeof window.console === 'object' && typeof window.console.error === 'function') {
-            window.console.error(exception.message);
+            window.console.error('[initMap]:', exception.message);
         }
     }
 };

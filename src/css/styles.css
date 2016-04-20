@@ -1,13 +1,9 @@
-/*body {
-    position: relative;
-}*/
-
 p {
     text-align: left;
 }
 
 .container .jumbotron {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #080808;
     border-radius: 0;
     margin-bottom: 0;
 }
@@ -16,10 +12,6 @@ p {
     color: #269abc;
     margin-bottom: 20px;
 }
-
-/*#home {
-    margin-top: 51px;
-}*/
 
 .back-to-top {
     text-align: right;

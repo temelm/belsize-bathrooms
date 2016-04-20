@@ -1,7 +1,11 @@
 <?php
     if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"])) {
-        $msg = "Name: ".$_POST["name"]."\nEmail: ".$_POST["email"]."\nMessage: ".$_POST["message"];
-        mail("mustafatemel90@gmail.com", "Belsize Bathrooms", $msg);
+        $to = "mustafatemel90@gmail.com"; // belsizebathrooms@btconnect.com 
+        $subject = $_POST["name"]." - ".$_POST["email"];
+        $message = $_POST["message"]."\n\n--------\n\n".$_POST["name"]."\n".$_POST["email"];
+        
+        mail($to, $subject, $message);
     }
+    
     header("Location: /belsize-bathrooms/");
 ?>
