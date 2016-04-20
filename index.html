@@ -14,7 +14,6 @@
 		<script src="src/js/bootstrap.min.js"></script> <!-- Required for Bootstrap -->
 	</head>
 	
-	<!--<body data-spy="scroll" data-target="#bb-navbar">-->
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -41,7 +40,7 @@
 		
 		<section id="home">
 			<div class="container">
-				<div class="jumbotron text-center">
+				<div class="jumbotron">
 					<h1>Home</h1>
 				</div>
 			</div>
@@ -49,7 +48,7 @@
 		
 		<section id="about">
 			<div class="container">
-				<div class="jumbotron text-center">
+				<div class="jumbotron">
 					<h1>About us</h1>
 					
 					<!-- BEGIN TODO: REVIEW -->
@@ -69,12 +68,8 @@
 		
 		<section id="store">
 			<div class="container">
-				<div class="jumbotron text-center">
+				<div class="jumbotron">
 					<h1>Bathroom ideas</h1>
-					
-					<!-- BEGIN TODO: REVIEW -->
-					<p><b>Please click on the links below</b> to access just some of the products available here at Belsize Bathrooms.</p>
-					<!-- END TODO: REVIEW -->
 					
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -174,34 +169,36 @@
 		
 		<section id="contact">
 			<div class="container">
-				<div class="jumbotron text-center">
+				<div class="jumbotron">
 					<h1>Contact us</h1>
 					
 					<!-- BEGIN TODO: REVIEW -->
 					<p><b>Address:</b> 43 Fairfax Road, St John's Wood, London, NW6 4EL</p>
 					<p><b>Nearest Overground station:</b> South Hampstead</p>
 					<p><b>Nearest Underground station:</b> Swiss Cottage</p>
-					<!--<p><b>Opening hours:</b> Monday-Friday 09:00-17:30, Saturday 09:00-17:00, Sunday closed</p>-->
+					<!-- END TODO: REVIEW -->
 					
+					<hr>
+					
+					<h3>Opening hours</h3>
 					<table class="table table-bordered" id="opening-hours">
-					    <tr>
+					    <tr class="first">
 					        <td>Monday - Friday</td>
 					        <td>Saturday</td>
 					        <td>Sunday</td>
 					    </tr>
-					    <tr>
+					    <tr class="last">
 					        <td>09:00 - 17:30</td>
 					        <td>09:00 - 17:00</td>
 					        <td>Closed</td>
 					    </tr>
 					</table>
-					<!-- END TODO: REVIEW -->
 					
+					
+					<h3>Find us</h3>
 					<div id="map"></div>
 					
-					<!-- Enquiries: please include your telephone number if you would like us to call you. -->
-					
-					<!-- BEGIN TODO: REVIEW -->
+					<h3>Send us a message</h3>
 					<form class="form-horizontal" action="mail.php" method="post">
 					    <div class="form-group">
 					        <label class="control-label col-sm-2" for="name">Name</label>
@@ -230,7 +227,6 @@
 					        </div>
 					    </div>
 					</form>
-					<!-- END TODO: REVIEW -->
 					
 					<footer class="back-to-top">
 					    <a class="back-to-top-link" href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>&#160;Back to top</a>
