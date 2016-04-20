@@ -35,7 +35,7 @@
             $j('#store .list-group-item a').prop('target', '_blank');
             
             $j('#send').click(function(event) {
-                event.preventDefault();
+                //event.preventDefault();
             });
         }
     } catch (exception) {
