@@ -25,6 +25,14 @@ body {
     width: 810px;
 }
 
+#home ul:last-child {
+    margin-top: 20px;
+}
+
+#home ul:last-child li:last-child {
+    margin-bottom: 0;
+}
+
 .back-to-top {
     text-align: right;
 }

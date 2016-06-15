@@ -32,6 +32,15 @@
                     scrollTop: 0
                 }, g.scrollSpeed);
             });
+            
+            // Handle 'home' section link clicks
+            $j('#home .lead a').click(function(event) {
+                event.preventDefault();
+                
+                $j('html, body').animate({
+                    scrollTop: $j($j(this).prop('hash')).offset().top
+                }, g.scrollSpeed);
+            });
         }
     } catch (exception) {
         if (!!c && typeof c === 'object' && typeof c.error === 'function') {
