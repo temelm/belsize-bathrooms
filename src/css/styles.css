@@ -99,6 +99,10 @@ body {
         display: none;
     }
     
+    #home {
+        margin-top: 96px;
+    }
+    
     #contact form {
         text-align: center;
     }
