@@ -95,6 +95,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .navbar-fixed-top .navbar-header {
+        display: none;
+    }
+    
     #contact form {
         text-align: center;
     }
