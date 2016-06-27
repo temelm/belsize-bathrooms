@@ -5,8 +5,8 @@
         $message = $_POST["message"]."\n\n--------\n\n".$_POST["name"]."\n".$_POST["email"];
         $message = wordwrap($message, 120);
         
-        mail($to, $subject, $message);
+        //mail($to, $subject, $message);
     }
     
-    header("Location: /belsize-bathrooms/");
+    //header("Location: ./index.html");
 ?>
