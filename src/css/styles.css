@@ -20,7 +20,8 @@ body {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    height: 405px;
+    /*height: 405px;*/
+    height: auto;
     margin: auto;
     width: 810px;
 }
