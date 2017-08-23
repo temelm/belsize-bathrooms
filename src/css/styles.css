@@ -103,6 +103,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .lead {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .navbar-fixed-top .navbar-header {
     display: none;
