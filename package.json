@@ -1,0 +1,27 @@
+{
+  "name": "belsizebathrooms.co.uk",
+  "version": "1.0.0",
+  "description": "Belsize Bathrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temelm/belsize-bathrooms.git"
+  },
+  "author": "Mustafa Temel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temelm/belsize-bathrooms/issues"
+  },
+  "homepage": "https://github.com/temelm/belsize-bathrooms#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "jquery": "^3.2.1"
+  }
+}
