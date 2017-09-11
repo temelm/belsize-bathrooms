@@ -4,7 +4,7 @@
     $name = strip_tags($_POST["name"]);
     $email = strip_tags($_POST["email"]);
 
-    $to = "mustafatemel90@gmail.com"; // belsizebathrooms@btconnect.com 
+    $to = "belsizebathrooms@btconnect.com";
     $subject = "Message from ".$name." <".$email.">";
     $message = "<p>Name: ".$name."</p>"."<p>Email: ".$email."</p>"."<p>".strip_tags($_POST["message"])."</p>";
     $message = wordwrap($message, 120);
