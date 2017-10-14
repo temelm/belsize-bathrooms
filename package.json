@@ -4,7 +4,7 @@
   "description": "Belsize Bathrooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cleanbuild": "gulp clean && gulp build"
   },
   "repository": {
     "type": "git",
